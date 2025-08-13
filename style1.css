@@ -263,7 +263,7 @@ img {
 }
 
 .home-title {
-    
+
     padding-left: 4.25rem;
     position: relative;
 }
@@ -292,6 +292,7 @@ h2 {
     margin-bottom: 10px;
 
 }
+
 h2 span {
     color: var(--electric-blue);
 }
@@ -299,6 +300,24 @@ h2 span {
 .home-description {
     max-width: 500px;
     margin-block: 2rem 2.5rem;
+}
+
+
+.social-icons {
+   
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    color: var(--first-color);
+    font-size: 28px;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--electric-blue);
+    transform: scale(1.2);
 }
 
 
