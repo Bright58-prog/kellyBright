@@ -1,22 +1,27 @@
 :root {
-    --deep-teal: #005f73;
+    /* Main Color Palette */
+    --deep-navy: #0B2545;
     /* Primary Base */
-    --vibrant-coral: #ff6f61;
-    /* Accent / Highlights */
-    --soft-ivory: #f9f9f9;
+    --royal-purple: #6C5CE7;
+    /* Accent / Creative edge */
+    --electric-blue: #00B4D8;
+    /* Highlight / Links */
+    --soft-gold: #F9C74F;
+    /* Warm Accent */
+    --light-gray: #F1F3F4;
     /* Neutral Background */
-    --warm-gold: #d4af37;
-    /* Secondary Accent */
-    --dark-charcoal: #333333;
-    /* Text Color */
+    --charcoal: #2D2D2D;
+    /* Text */
 
-    /* Derived colors */
-    --first-color: var(--deep-teal);
-    --title-color: var(--soft-ivory);
-    --text-color: var(--dark-charcoal);
-    --body-color: var(--soft-ivory);
-    --container-color: #e7e7e7;
-    --border-color: #bfbfbf;
+    /* Replace old variables with new colors */
+    --first-color: var(--deep-navy);
+    --title-color: var(--light-gray);
+    --text-color: var(--charcoal);
+    --body-color: var(--light-gray);
+    --container-color: #ffffffcc;
+    /* subtle overlay */
+    --border-color: rgba(249, 199, 79, 0.8);
+    /* soft gold transparent */
     --white-color: #ffffff;
 
     /* font sizes */
@@ -28,23 +33,13 @@
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
 
-
     /* font weight */
     --weight-500: 500;
     --weight-600: 600;
     --weight-700: 700;
     --weight-800: 800;
-
-    /* Replace your current color vars with these */
-    --first-color: var(--primary-color);
-    --title-color: var(--text-color);
-    --body-color: var(--neutral-bg);
-    --container-color: #ffffffcc;
-    /* a slight white overlay for containers */
-    --border-color: #d4af37cc;
-    /* warm gold with transparency */
-    --white-color: #fff;
 }
+
 
 
 * {
@@ -61,18 +56,13 @@ button {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: var(--weight-500);
-    background: linear-gradient(-45deg, #44121b, #0c0c16, #000616, #011833, #44121b);
+    background: linear-gradient(-45deg, var(--deep-navy), var(--royal-purple), var(--charcoal), var(--electric-blue));
     background-size: 400% 400%;
     animation: gradientBG 4s ease infinite;
     color: var(--text-color);
 }
 
-
-body {
-    background-color: var(--body-color);
-    color: var(--text-color);
-}
-
+/* headings */
 h1,
 h2,
 h3 {
@@ -112,7 +102,7 @@ img {
 .button {
     display: inline-block;
     color: var(--title-color);
-    border: 1px solid var(--first-color);
+    border: 1px solid var(--soft-gold);
     padding: 1.25rem 4.5rem 1.25rem 2rem;
     border-radius: 2rem;
     font-size: var(--small-font-size);
@@ -130,7 +120,7 @@ img {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: var(--first-color);
+    background-color: var(--deep-navy);
     border-radius: inherit;
     z-index: -10;
     transform: translateX(100%);
@@ -164,7 +154,7 @@ img {
 }
 
 .section-title span {
-    color: var(--first-color);
+    color: var(--electric-blue);
 }
 
 /* layout */
@@ -310,63 +300,42 @@ img {
 }
 
 /* about */
-.about-container,
-.infos-list,
-.stats {
+.about {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: start;
+    align-items: center;
     gap: 1.5rem;
 }
 
-.section-subtitle {
-    font-size: var(--h3-font-size);
-    font-weight: var(--weight-700);
-    margin-bottom: 3rem;
-}
-
-.infos-list {
-    row-gap: 1.25rem;
-    margin-bottom: 2.25rem;
-}
-
-.infos-title,
-.infos-description {
-    font-size: var(--small-font-size);
-}
-
-.info-description {
-    color: var(--title-color);
-
-}
-
-.stats-box {
-    border: 2px solid var(--border-color);
-    padding: 1.25rem 2rem 1.5rem;
-    border-radius: 0.8rem;
+.about-img img {
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
     width: 100%;
+    border-radius: 8px;
 }
 
-.stats-no {
-    color: var(--first-color);
-    font-size: var(--h2-font-size);
-    margin-bottom: 0.9rem;
+.about-text h2 {
+    font-size: 60px;
 }
 
-.stats-title {
-    font-size: var(--small-font-size);
-    line-height: 1.5;
-    padding-left: 2.5rem;
-    position: relative;
+.about-text h2 span {
+    color: #0ef;
 }
 
-.stats-title::before {
-    content: '';
-    position: absolute;
-    top: 25%;
-    left: 0;
-    width: 30px;
-    height: 1px;
-    background-color: var(--text-color);
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
 }
 
 .separator {
@@ -406,7 +375,7 @@ img {
 }
 
 .progress-bar {
-    background-color: #333;
+    background-color: var(--charcoal);
     border-radius: 10px;
     overflow: hidden;
     height: 25px;
@@ -415,7 +384,7 @@ img {
 
 .progress {
     height: 100%;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    background: linear-gradient(90deg, var(--electric-blue), var(--royal-purple));
     text-align: right;
     padding-right: 10px;
     line-height: 25px;
@@ -650,6 +619,25 @@ img {
     margin-top: 1rem;
 }
 
+.contact-button:hover {
+    color: var(--white-color);
+}
+
+.contact-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--first-color);
+    border-radius: inherit;
+    z-index: -10;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+
+.button contact-button:hover::before {
+    transform: translateX(0);
+}
+
 .contact-message {
     position: absolute;
     right: 5rem;
@@ -665,7 +653,7 @@ img {
 }
 
 
-
+/* Animations */
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -678,29 +666,6 @@ img {
     100% {
         background-position: 0% 50%;
     }
-}
-
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(-20px);
-    }
-
-    60% {
-        transform: translateY(-10px);
-    }
-}
-
-.home-img {
-    animation: bounce 2s infinite;
 }
 
 /* Small devices (phones, less than 576px) */
