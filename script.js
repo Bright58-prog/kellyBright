@@ -6,7 +6,6 @@ const titles = [
     "Photographer",
     "Song Composer",
     "Technology Enthusiast",
-    "Crypto & Freelancing Entrepreneur"
 ];
 
 let i = 0;

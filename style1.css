@@ -932,7 +932,7 @@ h2 span {
     top: 15%;
     left: 75%;
     animation-duration: 20s;
-}
+}  
 
 /* ===== Make It Responsive ===== */
 @media (max-width: 768px) {
