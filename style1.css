@@ -52,12 +52,11 @@
 body,
 input,
 textarea,
-skills,
 button {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: var(--weight-500);
-    background: linear-gradient(-45deg, var(--deep-navy), var(--royal-purple), var(--electric-blue));
+    background: linear-gradient(-45deg, var(--deep-navy), var(--royal-purple), var(--charcoal), var(--electric-blue));
     background-size: 400% 400%;
     animation: gradientBG 4s ease infinite;
     color: var(--text-color);
@@ -304,7 +303,7 @@ h2 span {
 
 
 .social-icons {
-   
+
     margin-bottom: 2rem;
 }
 
@@ -381,9 +380,6 @@ h2 span {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    background: linear-gradient(-45deg, var(--deep-navy), var(--royal-purple), var(--charcoal) var(--electric-blue));
-    background-size: 400% 400%;
-    animation: gradientBG 4s ease infinite;
     border: 2px solid var(--first-color);
 
 }
